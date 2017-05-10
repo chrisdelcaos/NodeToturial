@@ -1,0 +1,18 @@
+{
+  "name": "web-app",
+  "version": "0.1.0",
+  "description": "web-app de prueba con node",
+  "main": "app.js",
+  "scripts": {
+    "start": "node ./app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Christopher Vicuña",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.15.2"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
