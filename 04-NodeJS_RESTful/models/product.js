@@ -3,6 +3,7 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
+//modelo producto
 const ProductSchema = Schema({
     name: String,
     picture: String,
