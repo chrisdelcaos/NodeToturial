@@ -25,7 +25,7 @@ function decodeToken(token) {
                     message: 'El token ha expirado'
                 });
             }
-
+            //si todo sale bien, envia el token
             resolve(payload.sub);
         } catch (err) {
             reject({

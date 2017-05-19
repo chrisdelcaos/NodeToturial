@@ -6,7 +6,7 @@ const service = require('../services/index');
 
 //funcion de registro
 function signUp (req, res) {
-    
+    //instancia de nuevo usuario, asume desde modelo USER
     const user = new User({
         email: req.body.email,
         displayName: req.body.displayName,
@@ -22,6 +22,7 @@ function signUp (req, res) {
     });
 }
 
+//login
 function signIn (req, res) {
     User.find({email: req.body.displayName}, (err, user) => {
         if (err) return res.status(500).send({mesagge: err})
