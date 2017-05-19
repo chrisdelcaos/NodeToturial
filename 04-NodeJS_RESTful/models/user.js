@@ -16,13 +16,16 @@ const UserSchema = new Schema ({
 });
 
 //encripta contraseña
-UserSchema.pre('save', (next) => {
-    let user = this;
+UserSchema.pre('save', function (next) {
+    let user = this
     
-    if(!user.isModified('password')) return next()
+    if(!user.isModified('password')) {
+        return next()
+    } 
 
     bcrypt.genSalt(10, (err, salt) => {
-        if (err) return err
+        
+        if (err) return err;
 
         bcrypt.hash(user.password, salt, null, (err, hash) => {
             if (err) return err
